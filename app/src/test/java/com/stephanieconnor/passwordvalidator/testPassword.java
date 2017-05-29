@@ -21,6 +21,7 @@ public class testPassword {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void tLength(){
 
         Password p = new Password("thisisatest");
@@ -31,6 +32,7 @@ public class testPassword {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void tUpper(){
 
         Password p = new Password("thisisaTest");
@@ -41,6 +43,7 @@ public class testPassword {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void tDigit(){
 
         Password p = new Password("thisisaTest1");
@@ -51,6 +54,7 @@ public class testPassword {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void tSpecial(){
 
         Password p = new Password("thisi[saTest");
