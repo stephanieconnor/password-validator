@@ -32,4 +32,37 @@ public class testPassword {
 
         assertEquals(expected, actual);
     }
+
+    public void tUpper(){
+
+        Password p = new Password();
+        p.setPassword("thisisaTest");
+
+        boolean expected = true;
+        boolean actual = p.uppercase();
+
+        assertEquals(expected, actual);
+    }
+
+    public void tDigit(){
+
+        Password p = new Password();
+        p.setPassword("thisisaTest1");
+
+        boolean expected = true;
+        boolean actual = p.digit();
+
+        assertEquals(expected, actual);
+    }
+
+    public void tSpecial(){
+
+        Password p = new Password();
+        p.setPassword("thisi[saTest");
+
+        boolean expected = true;
+        boolean actual = p.special();
+
+        assertEquals(expected, actual);
+    }
 }
