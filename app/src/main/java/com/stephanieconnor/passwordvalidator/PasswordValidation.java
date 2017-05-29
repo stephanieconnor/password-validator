@@ -2,6 +2,8 @@ package com.stephanieconnor.passwordvalidator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class PasswordValidation extends AppCompatActivity {
 
@@ -11,27 +13,10 @@ public class PasswordValidation extends AppCompatActivity {
         setContentView(R.layout.activity_password_validation);
     }
 
-    //main method that determines if the password is valid
-//    public int isValid(){
-//
-//        Password p = new Password();
-//
-//        int test = 0;
-//
-//        if (p.notPassword())
-//            test++;
-//        if(p.length())
-//            test++;
-//        if(p.uppercase())
-//            test++;
-//        if(p.digit())
-//            test++;
-//        if(p.special())
-//            test++;
-//
-//        return test;
-//    }
+    // do something when the button is clicked
+    public void buttonOnClick(View v) {
 
+    }
 
 
 
