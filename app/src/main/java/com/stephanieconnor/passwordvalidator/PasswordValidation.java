@@ -11,20 +11,22 @@ public class PasswordValidation extends AppCompatActivity {
         setContentView(R.layout.activity_password_validation);
     }
 
-    //goes through the methods to determine the number of tests passed
-    public int isValid(String p){
+    //main method that determines if the password is valid
+    public int isValid(){
+
+        Password p = new Password();
 
         int test = 0;
 
-        if (notPassword(p))
+        if (p.notPassword())
             test++;
-        if(length(p))
+        if(p.length())
             test++;
-        if(uppercase(p))
+        if(p.uppercase())
             test++;
-        if(digit(p))
+        if(p.digit())
             test++;
-        if(special(p))
+        if(p.special())
             test++;
 
         return test;
@@ -32,58 +34,5 @@ public class PasswordValidation extends AppCompatActivity {
 
 
 
-    //method that checks that the password != "password"
-    public boolean notPassword(String p){
-        return !p.equals("password");
-    }
 
-    //method that ensures that the length is greater than 8 char
-    public boolean length(String p){
-        return p.length() > 8;
-    }
-
-    //method that ensures that there is at least one Uppercase letter
-    public boolean uppercase(String p){
-
-        for (int i = 0; i < p.length(); i++){
-            if (Character.isUpperCase(p.charAt(i))) {
-                return true;
-            }
-        }
-
-        return false;
-
-    }
-
-    //method that ensures that there is at least one digit
-    public boolean digit(String p){
-
-        for (int i = 0; i < p.length(); i++) {
-            if (Character.isDigit(p.charAt(i)))
-                return true;
-
-        }
-
-        return false;
-    }
-
-    public boolean special(String p) {
-
-        //created a char array with all the special chars
-        char[] special;
-        special = new char[] { '"', ' ', '!', '#', '$', '%', '&', '(', ')',
-                '*', '+' , ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']',
-                '^', '_' , '`', '{', '|', '}', '~'};
-        char[] charArray = p.toCharArray();
-
-        for (int i = 0; i < charArray.length; i++) {
-            for (int j = 0; j < special.length; j++ )
-                if (charArray[i] == special[j]) {
-                    return true;
-                }
-        }
-
-        return false;
-
-    }
 }
