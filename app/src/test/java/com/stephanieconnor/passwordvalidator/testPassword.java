@@ -13,8 +13,7 @@ public class testPassword {
     @Test
     public void tpassword() throws Exception {
 
-        Password p = new Password();
-        p.setPassword("thisisatest");
+        Password p = new Password("thisisatest");
 
         boolean expected = true;
         boolean actual = p.notPassword();
@@ -24,8 +23,7 @@ public class testPassword {
 
     public void tLength(){
 
-        Password p = new Password();
-        p.setPassword("thisisatest");
+        Password p = new Password("thisisatest");
 
         boolean expected = true;
         boolean actual = p.length();
@@ -35,8 +33,7 @@ public class testPassword {
 
     public void tUpper(){
 
-        Password p = new Password();
-        p.setPassword("thisisaTest");
+        Password p = new Password("thisisaTest");
 
         boolean expected = true;
         boolean actual = p.uppercase();
@@ -46,8 +43,7 @@ public class testPassword {
 
     public void tDigit(){
 
-        Password p = new Password();
-        p.setPassword("thisisaTest1");
+        Password p = new Password("thisisaTest1");
 
         boolean expected = true;
         boolean actual = p.digit();
@@ -57,8 +53,7 @@ public class testPassword {
 
     public void tSpecial(){
 
-        Password p = new Password();
-        p.setPassword("thisi[saTest");
+        Password p = new Password("thisi[saTest");
 
         boolean expected = true;
         boolean actual = p.special();

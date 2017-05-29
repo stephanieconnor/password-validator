@@ -12,25 +12,25 @@ public class PasswordValidation extends AppCompatActivity {
     }
 
     //main method that determines if the password is valid
-    public int isValid(){
-
-        Password p = new Password();
-
-        int test = 0;
-
-        if (p.notPassword())
-            test++;
-        if(p.length())
-            test++;
-        if(p.uppercase())
-            test++;
-        if(p.digit())
-            test++;
-        if(p.special())
-            test++;
-
-        return test;
-    }
+//    public int isValid(){
+//
+//        Password p = new Password();
+//
+//        int test = 0;
+//
+//        if (p.notPassword())
+//            test++;
+//        if(p.length())
+//            test++;
+//        if(p.uppercase())
+//            test++;
+//        if(p.digit())
+//            test++;
+//        if(p.special())
+//            test++;
+//
+//        return test;
+//    }
 
 
 
